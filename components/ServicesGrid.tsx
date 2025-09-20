@@ -156,7 +156,7 @@ const ServicesGrid: React.FC = () => {
                 ))}
               </ul>
 
-              {/* Learn More Link */}
+              {/* Learn More Link - Commented out for now 
               <div className="mt-6 pt-6 border-t border-gray-200 dark:border-gray-700">
                 <a
                   href="#"
@@ -180,6 +180,7 @@ const ServicesGrid: React.FC = () => {
                   </svg>
                 </a>
               </div>
+              */}
             </motion.div>
           ))}
         </motion.div>

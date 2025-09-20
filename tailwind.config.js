@@ -10,8 +10,8 @@ module.exports = {
     extend: {
       colors: {
         // Talsom-inspired colors
-        'primary-green': '#006B3C',
-        'accent-yellow': '#FFD700',
+        'primary-green': '#1E40AF',
+        'accent-yellow': '#F97316',
         // Bain-inspired colors
         'primary-red': '#CC0000',
         'accent-gray': '#4A4A4A',

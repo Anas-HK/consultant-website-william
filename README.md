@@ -1,144 +1,148 @@
-# ConsultPro - Modern Consultant Website
+# Consultant Website
 
-A sleek, modern consultant website built with Next.js, TypeScript, and Tailwind CSS. Inspired by leading consulting firms like Talsom and Bain & Company.
+A modern, responsive consultant website built with Next.js, TypeScript, and Tailwind CSS.
 
-## Features
-
-- 🌓 **Dark/Light Theme Toggle** - Switch between light and dark modes
-- 🎨 **Dual Color Schemes** - Choose between Talsom (green/yellow) or Bain (red) inspired themes
-- 📱 **Fully Responsive** - Optimized for all devices and screen sizes
-- ⚡ **Performance Optimized** - Fast loading with Next.js optimization
-- 🎯 **Modern UI/UX** - Clean design with smooth animations
-- ♿ **Accessible** - Built with accessibility in mind
-
-## Getting Started
+## 🚀 Quick Start
 
 ### Prerequisites
 
-- Node.js 16.x or later
-- npm or yarn package manager
+Before running this project, make sure you have the following installed on your system:
+
+- **Node.js** (version 18.0 or higher)
+- **npm** (comes with Node.js) or **yarn**
+
+You can check if you have Node.js installed by running:
+```bash
+node --version
+npm --version
+```
 
 ### Installation
 
-1. Clone the repository:
-```bash
-git clone <repository-url>
-cd consultant-site-2
+1. **Clone or navigate to the project directory:**
+   ```bash
+   cd "C:\Projects\Consultant Site 2"
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+   
+   This will install all the required packages listed in `package.json`, including:
+   - Next.js 14.0.3
+   - React 18.2.0
+   - TypeScript 5.3.2
+   - Tailwind CSS 3.3.5
+   - Framer Motion 10.16.4
+   - React Icons 4.12.0
+
+### Running the Development Server
+
+1. **Start the development server:**
+   ```bash
+   npm run dev
+   ```
+
+2. **Open your browser and navigate to:**
+   ```
+   http://localhost:3000
+   ```
+
+The development server will automatically reload when you make changes to your code.
+
+## 📁 Project Structure
+
+```
+consultant-website/
+├── app/                    # Next.js 13+ App Router
+│   ├── contact/           # Contact page
+│   ├── layout.tsx         # Root layout component
+│   └── page.tsx           # Home page
+├── components/            # React components
+│   ├── About.tsx          # About section
+│   ├── Footer.tsx         # Footer component
+│   ├── Navigation.tsx     # Navigation bar
+│   ├── ServicesGrid.tsx   # Services section
+│   └── ...
+├── contexts/              # React contexts
+│   └── ThemeContext.tsx   # Theme management
+├── styles/                # CSS files
+│   └── globals.css        # Global styles
+├── package.json           # Project dependencies
+├── tailwind.config.js     # Tailwind CSS configuration
+├── tsconfig.json          # TypeScript configuration
+└── next.config.js         # Next.js configuration
 ```
 
-2. Install dependencies:
-```bash
-npm install
-# or
-yarn install
-```
+## 🛠️ Available Scripts
 
-3. Run the development server:
-```bash
-npm run dev
-# or
-yarn dev
-```
+In the project directory, you can run:
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser
+### `npm run dev`
+Runs the app in development mode on [http://localhost:3000](http://localhost:3000).
+The page will reload when you make changes.
 
-## Project Structure
+### `npm run build`
+Builds the app for production to the `.next` folder.
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-```
-├── app/                # Next.js app directory
-│   ├── layout.tsx     # Root layout
-│   └── page.tsx       # Home page
-├── components/        # React components
-│   ├── Navigation.tsx # Header navigation
-│   ├── Hero.tsx       # Hero section
-│   ├── ServicesGrid.tsx
-│   ├── OurApproach.tsx
-│   ├── Insights.tsx
-│   ├── About.tsx
-│   ├── CallToAction.tsx
-│   └── Footer.tsx
-├── contexts/          # React contexts
-│   └── ThemeContext.tsx
-├── styles/           # Global styles
-│   └── globals.css
-└── public/           # Static assets
-```
+### `npm start`
+Runs the built app in production mode.
+You must run `npm run build` first.
 
-## Customization
+### `npm run lint`
+Runs the linter to check for code quality issues.
 
-### Colors
+## 🎨 Features
 
-The color schemes can be customized in `tailwind.config.js`:
+- **Modern Design**: Clean, professional layout with smooth animations
+- **Responsive**: Mobile-first design that works on all devices
+- **Theme Support**: Multiple color schemes including "Talsom" theme
+- **Dark Mode**: Built-in dark mode support
+- **Performance**: Optimized with Next.js 14 and TypeScript
+- **Animations**: Smooth animations powered by Framer Motion
+- **SEO Ready**: Built with Next.js best practices for SEO
 
-```javascript
-// Talsom-inspired colors
-'primary-green': '#006B3C',
-'accent-yellow': '#FFD700',
+## 🔧 Technologies Used
 
-// Bain-inspired colors
-'primary-red': '#CC0000',
-'accent-gray': '#4A4A4A',
-```
+- **Frontend Framework**: Next.js 14 with App Router
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Animations**: Framer Motion
+- **Icons**: React Icons
+- **Build Tool**: Next.js built-in bundler
 
-### Content
+## 🚨 Troubleshooting
 
-All text content is directly in the component files. To update:
-- Company name: Update "ConsultPro" throughout components
-- Services: Edit `ServicesGrid.tsx`
-- Case studies: Edit `Insights.tsx`
-- Contact info: Edit `Footer.tsx` and `CallToAction.tsx`
+### Common Issues
 
-### Images
+1. **Port already in use**: If port 3000 is already in use, Next.js will automatically use the next available port (3001, 3002, etc.)
 
-Replace placeholder images with actual images:
-- Update image URLs in components
-- Add images to `public/` directory
-- Update `next.config.js` if using external image domains
+2. **Dependencies not installed**: If you see import errors, make sure you've run `npm install`
 
-## Deployment
+3. **Node.js version**: Ensure you're using Node.js version 18 or higher
 
-### Vercel (Recommended)
+4. **Clear cache**: If you encounter build issues, try:
+   ```bash
+   rm -rf .next
+   npm run dev
+   ```
 
-1. Push your code to GitHub
-2. Visit [vercel.com](https://vercel.com)
-3. Import your GitHub repository
-4. Deploy with default settings
+### Getting Help
 
-### Other Platforms
+- Check the [Next.js Documentation](https://nextjs.org/docs)
+- Review the [Tailwind CSS Documentation](https://tailwindcss.com/docs)
+- For project-specific issues, check the browser console for error messages
 
-Build for production:
-```bash
-npm run build
-# or
-yarn build
-```
+## 📝 Development Notes
 
-Start production server:
-```bash
-npm start
-# or
-yarn start
-```
+- The project uses Next.js 13+ App Router (not Pages Router)
+- Tailwind CSS is configured for the project's design system
+- The theme system supports multiple color schemes
+- All components are built with TypeScript for type safety
+- Framer Motion provides smooth animations throughout the site
 
-## Technologies Used
+---
 
-- **Next.js 14** - React framework
-- **TypeScript** - Type safety
-- **Tailwind CSS** - Utility-first CSS
-- **Framer Motion** - Animations
-- **React Icons** - Icon library
-
-## Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-
-## License
-
-This project is private and proprietary.
-
-## Support
-
-For questions or support, contact: hello@consultpro.com
+**Happy coding!** 🎉
