@@ -30,8 +30,8 @@ const Navigation: React.FC = () => {
   const ctaItem = { name: "Let's Talk", href: '/contact' };
 
   const isTalsomTheme = colorScheme === 'talsom';
-  const primaryColor = isTalsomTheme ? 'primary-green' : 'primary-red';
-  const accentColor = isTalsomTheme ? 'accent-yellow' : 'accent-gray';
+  const primaryColorClass = isTalsomTheme ? 'bg-primary-green' : 'bg-primary-red';
+  const primaryTextClass = isTalsomTheme ? 'text-primary-green' : 'text-primary-red';
 
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
@@ -43,11 +43,11 @@ const Navigation: React.FC = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <div className={`w-10 h-10 bg-${primaryColor} rounded-lg flex items-center justify-center`}>
+            <div className={`w-10 h-10 ${primaryColorClass} rounded-lg flex items-center justify-center`}>
               <span className="text-white font-bold text-xl">C</span>
             </div>
             <span className="font-display font-bold text-xl text-gray-900 dark:text-white">
-              Consult<span className={`text-${primaryColor}`}>Pro</span>
+              Consult<span className={primaryTextClass}>Pro</span>
             </span>
           </Link>
 
@@ -68,7 +68,7 @@ const Navigation: React.FC = () => {
               href={ctaItem.href}
               className={`px-6 py-2 rounded-full font-semibold text-white transition-all duration-300 hover:shadow-lg transform hover:scale-105 ${
                 isTalsomTheme 
-                  ? 'bg-primary-green hover:bg-green-700' 
+                  ? 'bg-primary-green hover:bg-blue-700' 
                   : 'bg-primary-red hover:bg-red-700'
               }`}
             >
